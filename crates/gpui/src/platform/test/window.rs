@@ -206,6 +206,10 @@ impl PlatformWindow for TestWindow {
         self.0.lock().is_fullscreen
     }
 
+    fn set_background(&mut self, background: crate::WindowBackground) {
+        unimplemented!()
+    }
+
     fn on_request_frame(&self, _callback: Box<dyn FnMut()>) {}
 
     fn on_input(&self, callback: Box<dyn FnMut(crate::PlatformInput) -> DispatchEventResult>) {
